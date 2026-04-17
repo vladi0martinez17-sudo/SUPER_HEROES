@@ -1,12 +1,10 @@
-/* ===== ESTILOS GENERALES ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
-/* COLORES OFICIALES */
 :root {
     --rojo-marvel: #E62424;
     --azul-marvel: #053C7D;
@@ -27,7 +25,6 @@ body {
     margin: 0 auto;
 }
 
-/* ===== HEADER ===== */
 .header {
     background: linear-gradient(to right, var(--rojo-marvel), var(--azul-marvel));
     position: sticky;
@@ -51,7 +48,6 @@ body {
     color: var(--blanco);
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .nav {
@@ -70,13 +66,12 @@ body {
     border: 2px solid transparent;
 }
 
-.nav a:hover {
+.nav a:hover, .nav a.activo {
     background: var(--blanco);
-    color: var(--rojo-marvel);
+    color: var(--rojo-marvel) !important;
     border-color: var(--blanco);
 }
 
-/* ===== SECCIONES ===== */
 .section {
     padding: 4rem 0;
     scroll-margin-top: 100px;
@@ -91,15 +86,12 @@ body {
     font-size: 2.8rem;
     margin-bottom: 3rem;
     text-transform: uppercase;
-    color: var(--blanco);
-    text-shadow: 0 0 10px var(--rojo-marvel);
 }
 
 .titulo-seccion span {
     color: var(--rojo-marvel);
 }
 
-/* ===== SECCIÓN INICIO ===== */
 .hero-contenido {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -142,7 +134,6 @@ body {
 .btn:hover {
     background: var(--azul-marvel);
     transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(5, 60, 125, 0.7);
 }
 
 .hero-imagen img {
@@ -151,7 +142,6 @@ body {
     border: 5px solid var(--rojo-marvel);
 }
 
-/* ===== TARJETAS 3D MARVEL ===== */
 .grid-personajes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -167,7 +157,6 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
@@ -180,7 +169,6 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 15px;
     border: 4px solid var(--rojo-marvel);
@@ -207,7 +195,6 @@ body {
 .card-front h3 {
     font-size: 1.4rem;
     color: white;
-    font-weight: bold;
 }
 
 .card-back {
@@ -218,7 +205,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: left;
 }
 
 .card-back h3 {
@@ -226,11 +212,6 @@ body {
     font-size: 1.6rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
-}
-
-.card-back p {
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
 }
 
 .nivel {
@@ -249,29 +230,45 @@ body {
 .progreso {
     height: 100%;
     background: white;
-    box-shadow: 0 0 10px white;
 }
 
-/* ===== HISTORIA Y FORMULARIO ===== */
-.contenido-historia img,
-.formulario input, .formulario textarea {
+.contenido-historia img {
     width: 100%;
     max-width: 600px;
     display: block;
     margin: 1.5rem auto;
     border-radius: 10px;
-}
-
-.contenido-historia img {
     border: 4px solid var(--azul-marvel);
 }
 
+.formulario {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .formulario input, .formulario textarea {
+    width: 100%;
     padding: 1rem;
+    margin-bottom: 1rem;
     background: #222;
     border: 2px solid var(--rojo-marvel);
     color: white;
+    border-radius: 8px;
 }
 
-/* ===== FO
-  
+#aviso {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: var(--rojo-marvel);
+    border-radius: 8px;
+    font-weight: bold;
+    display: none;
+}
+
+.footer {
+    background: #000;
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 3px solid var(--rojo-marvel);
+}
